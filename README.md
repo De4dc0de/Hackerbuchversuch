@@ -8,6 +8,6 @@ Der Zweck dieses Buches / dieser Textsammmlung ist etwas kompliziert. Es richtet
 
 Und auch hier noch einmal die Information:
 
-***Wir betreiben keine illgealen Aktivitäten. Wir beschäftigen uns ausschließlich mit der Fortbildung unserer Mitglieder.
+***Wir betreiben keine illgealen Aktivitäten. Wir beschäftigen uns ausschließlich mit der Fortbildung unserer Mitglieder.***
 
-***We are not involved into any illegal activities. We just care about educating our members
+***We are not involved into any illegal activities. We just care about educating our members***
