@@ -1,18 +1,17 @@
-Frage: Wie kann ich den Account einer bestimmten Person "hacken"?
+Accounts "hacken"
+=================
 
-Antwort:
-
-Bei diesem Thema scheiden sich die Geister, ob es überhaupt als "hacken" angesehen werden darf.
-Darum bevorzugen wir bei Deadc0de den Begriff "übernehmen".
+*Bei diesem Thema scheiden sich die Geister, ob es überhaupt als "hacken" angesehen werden darf.
+Darum bevorzugen wir bei Deadc0de den Begriff **"übernehmen"**.*
 
 Aufgrund vieler nachfragen wir in dieser Erklärung ein Account bei Instagram als Beispiel genommen, dies lässt sich aber auch gut auf andere Bereiche übertragen.
 
 Dazu folgendes Beispiel:
 
-Wir waren nicht so klug und haben Anton anstößige Fotos von uns geschickt. Er hat mit uns Schluss gemacht und veröffentlicht diese Fotos auf Instagram. (Ob das geht oder nicht ist erstmal egal.)
-Mit ihm kann man nicht vernünftig reden und natürlich können wir auch niemandem sonst davon erzählen. Also müssen wir seinen Account übernehmen.
+> Wir waren nicht so klug und haben Anton anstößige Fotos von uns geschickt. Er hat mit uns Schluss gemacht und veröffentlicht diese Fotos auf Instagram. (Ob das geht oder nicht ist erstmal egal.)
+> Mit ihm kann man nicht vernünftig reden und natürlich können wir auch niemandem sonst davon erzählen. Also müssen wir seinen Account übernehmen.
 
-Zuerst abstrahieren wir. Was ist ein Account?
+**Zuerst abstrahieren wir. Was ist ein Account?**
 
 Ein Account ist für uns ein Datensatz in einer Datenbank auf einem Server. Wenn wir bestimmte Bestandteile davon kennen (Benutzername und Passwort), haben wir die Berechtigung für Aktionen, die 
 ebenfalls in der Datenbank definiert sind.
