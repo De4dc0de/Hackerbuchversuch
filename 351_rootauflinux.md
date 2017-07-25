@@ -50,9 +50,7 @@ Kommunikation mit dem Programm einfügen**
 
 Folgendes ist sonst noch möglich:
 
-Falls man irgwndwie in ein Programm 
-schreiben kann, kann man folgendes(oder so) 
-versuchen(ich habs nicht getestet, wäre gut):
+Falls man irgendwie in ein Programm schreiben kann hat man ziemliches Glück und kann folgendes(oder so) versuchen (ich habs nicht getestet, wäre gut):
 
     cp /der/pfad/dasprogrammmitschreibzugriff /verzeichnis/mit/schreibzugriff/dasprogrammmitschreibzugriff
     echo "#!/bin/sh \neuercode&/verzeichnis/mit/schreibzugriff/dasprogrammmitschreibzugriff" > /der/pfad/dasprogrammmitschreibzugriff
