@@ -1,4 +1,4 @@
-Hier kommt was zur local privilege escalation auf Linux. 
+#Local privilege escalation auf Linux. 
 Hier werden alle (den Autoren) bekannten Möglichkeiten aufgeführt, auf Linux erhöhte Rechte zu bekommen. 
 Man muss nicht immer direkt auf root zielen, auch der Sprung von www-data auf einen Nutzer mit Verzeichnis in /home oder mit besseren Gruppenverhältnissen kann viel bedeuten. 
 Als Einstieg kann  eine Suche nach schreibbaren Verzeichnissen und Dateien außerhalb von /tmp dienen. 
@@ -10,6 +10,7 @@ Ich bin auch nicht der beste Texter, da könnten wir einen gebrauchen, der das b
 
 Das hier ist etwas, das sich wunderbar als Übungsaufgabe zum schreiben von scripts eignet.
 Kann einem dann einige Arbeit abnehmen und hilft den Skids. Viel Spaß dabei.
+
 =======================================================
 
 Zuerst sollte eine (reverse) shell stehen. Meine stabilste Lösung war bis jetzt, mit nc durch bash zu pipen und sowohl Ausgabe, als auch Fehler(!) durch eine andere Instanz von nc zu pipen. 
@@ -23,7 +24,7 @@ Programme mit SUID-Bit und Programme, die aktuell oder regelmäßig(cron, servic
 Das gesetzte SUID-Bit ist meistens leichter exploitbar und gibt einem oft weit mehr Macht. 
 Alles im Folgenden aufgelistete bezieht sich nur auf jeweils ein Programm. Mit ps und find können da Listen erstellt werden.
 
-Mit SUID-Bit:
+##Mit SUID-Bit:
 
     Kommando zum Finden von Dateien mit SUID und sticky bit gesetzt einfügen
 
@@ -38,7 +39,7 @@ Folgendes kann als Angriffsmöglichkeit bei
 Programmen dienen, die als root ausgeführt 
 werden.
 
-Programme, die als root ausgeführt werden:
+##Programme, die als root ausgeführt werden:
 
 -Schreibbare Config-files(cron!)
 -Für Librarys gilt das Gleiche wie bei Programmen mit gesetztem SUID bit, außer, dass es in manchen Fällen dynamisch geladene Librarys sein müssen. 
@@ -46,8 +47,8 @@ Programme, die als root ausgeführt werden:
 hat kill ein SUID-Bit, was aber so gut wie nie vorkommen dürfte. (Dann könnten reboots erzwungen werden)
 -Falls es sich um ein Netzwerkprogramm handelt, könnte es ein Angriffspunkt sein. Ist dann aber nicht unbedingt ne privilege escalation, sondern eine remote Lücke
 
----Hier andere eventuelle Möglichkeiten zur 
-Kommunikation mit dem Programm einfügen---
+**Hier andere eventuelle Möglichkeiten zur 
+Kommunikation mit dem Programm einfügen**
 
 Folgendes ist sonst noch möglich:
 
