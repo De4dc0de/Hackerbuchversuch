@@ -37,10 +37,6 @@ Alles im Folgenden aufgelistete bezieht sich nur auf jeweils ein Programm. Mit p
 Die letzten beiden Optionen geben einem auch unbeschränkten Zugriff. Gerade bei Challenges ist das oft hilfreich.
 - Als letzten Ausweg, falls alle anderen Methoden gescheitert sind, gilt das Suchen nach Sicherheitslücken/Overflows in den Programmen. Dies erfordert das meiste Wissen und die meiste Arbeit, kann nach dem Fund einer Lücke aber als Zero-Day verkauft werden. Das ist dann eine typische Local Privilege escalation lücke.
 
-Folgendes kann als Angriffsmöglichkeit bei 
-Programmen dienen, die als root ausgeführt 
-werden.
-
 ## Programme, die als root ausgeführt werden:
 
 - Schreibbare Config-files(cron!)
@@ -61,8 +57,6 @@ versuchen(ich habs nicht getestet, wäre gut):
     cp /der/pfad/dasprogrammmitschreibzugriff /verzeichnis/mit/schreibzugriff/dasprogrammmitschreibzugriff
     echo "#!/bin/sh \neuercode&/verzeichnis/mit/schreibzugriff/dasprogrammmitschreibzugriff" > /der/pfad/dasprogrammmitschreibzugriff
 
-Dann hofft man einfach, dass jemand mit 
-höheren Rechten es ausführt oder betreibt 
-social engineering.
+Dann hofft man einfach, dass jemand mit höheren Rechten es ausführt oder betreibt social engineering.
 
 Autoren: @waweic
