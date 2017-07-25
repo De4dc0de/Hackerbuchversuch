@@ -4,7 +4,10 @@ A book we are writing in german
 Das hier ist immernoch ziemlich "work in progress".
 Die Beteiligung jeder Person ist erwünscht. Falls in den Texten Wünsche aufkommen sollten (bessere Erklärung, niedrigerer Einstiegspunkt, genauere Informationen usw.) bitten wir darum, uns eine Nachicht oder ein Issue zukommen zu lassen. Auch eine Übersetzung wäre für unsere anderssprachigen Mitglieder sehr willkommen.
 
-Der Zweck dieses Buches / dieser Textsammmlung ist etwas kompliziert. Es richtet sich sowohl an Neueinsteiger in der Materie, als auch an erfahrene Hacker, die sich in einem bestimmten Gebiet fortbilden möchten. Darum ist uns das Spagat zwischen Informationsreichtum und einer sinnvollen Lernkurve sehr wichtig. Wer sich an den Texten beteiligt, kann sich auch gerne unten reinschreiben.
+Der Zweck dieses Buches / dieser Textsammmlung ist etwas kompliziert. Es richtet sich sowohl an Neueinsteiger in der Materie, als auch an erfahrene Hacker, die sich in einem bestimmten Gebiet fortbilden möchten. Darum ist uns das Spagat zwischen Informationsreichtum und einer sinnvollen Lernkurve sehr wichtig. Wer sich an den Texten beteiligt, kann sich auch gerne unten reinschreiben. Zum Lernen von [Markdown](https://de.wikipedia.org/wiki/Markdown "Markdown auf Wikipedia") gibt es [hier](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "Markdown Tutorial") ein Tutorial.
+
+
+
 
 Und auch hier noch einmal die Information:
 
