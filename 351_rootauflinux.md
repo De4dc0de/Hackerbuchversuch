@@ -30,12 +30,12 @@ Alles im Folgenden aufgelistete bezieht sich nur auf jeweils ein Programm. Mit p
 
     Kommando zum Finden von Dateien mit SUID und sticky bit gesetzt einfügen
 
--Schreibbare Programmdateien geben sofort vollen Zugriff.
--Schreibbare Libraries auch, sind aber schwerer auszunutzen. Gibt es aber selten, denn diese werden selten manuell falsch konfiguriert.
--Schreibbare Config-Dateien können helfen. Gibt es manchmal, wenn admins dumm sind.
--Bei Programmen wie nmap oder dhcpclient(oder so) können direkt im Programm manchmal ungesicherte Funktionen zum lesen/schreiben/ausführen genutzt werden.   
+- Schreibbare Programmdateien geben sofort vollen Zugriff.
+- Schreibbare Libraries auch, sind aber schwerer auszunutzen. Gibt es aber selten, denn diese werden selten manuell falsch konfiguriert.
+- Schreibbare Config-Dateien können helfen. Gibt es manchmal, wenn admins dumm sind.
+- Bei Programmen wie nmap oder dhcpclient(oder so) können direkt im Programm manchmal ungesicherte Funktionen zum lesen/schreiben/ausführen genutzt werden.   
 Die letzten beiden Optionen geben einem auch unbeschränkten Zugriff. Gerade bei Challenges ist das oft hilfreich.
--Als letzten Ausweg, falls alle anderen Methoden gescheitert sind, gilt das Suchen nach Sicherheitslücken/Overflows in den Programmen. Dies erfordert das meiste Wissen und die meiste Arbeit, kann nach dem Fund einer Lücke aber als Zero-Day verkauft werden. Das ist dann eine typische Local Privilege escalation lücke.
+- Als letzten Ausweg, falls alle anderen Methoden gescheitert sind, gilt das Suchen nach Sicherheitslücken/Overflows in den Programmen. Dies erfordert das meiste Wissen und die meiste Arbeit, kann nach dem Fund einer Lücke aber als Zero-Day verkauft werden. Das ist dann eine typische Local Privilege escalation lücke.
 
 Folgendes kann als Angriffsmöglichkeit bei 
 Programmen dienen, die als root ausgeführt 
@@ -43,11 +43,11 @@ werden.
 
 ## Programme, die als root ausgeführt werden:
 
--Schreibbare Config-files(cron!)
--Für Librarys gilt das Gleiche wie bei Programmen mit gesetztem SUID bit, außer, dass es in manchen Fällen dynamisch geladene Librarys sein müssen. 
--Calls können unter bestimmten Situationen möglicherweise genutzt werden, um den gewünschten Effekt zu erziehlen. Vielleicht 
+- Schreibbare Config-files(cron!)
+- Für Librarys gilt das Gleiche wie bei Programmen mit gesetztem SUID bit, außer, dass es in manchen Fällen dynamisch geladene Librarys sein müssen. 
+- Calls können unter bestimmten Situationen möglicherweise genutzt werden, um den gewünschten Effekt zu erziehlen. Vielleicht 
 hat kill ein SUID-Bit, was aber so gut wie nie vorkommen dürfte. (Dann könnten reboots erzwungen werden)
--Falls es sich um ein Netzwerkprogramm handelt, könnte es ein Angriffspunkt sein. Ist dann aber nicht unbedingt ne privilege escalation, sondern eine remote Lücke
+- Falls es sich um ein Netzwerkprogramm handelt, könnte es ein Angriffspunkt sein. Ist dann aber nicht unbedingt ne privilege escalation, sondern eine remote Lücke
 
 **Hier andere eventuelle Möglichkeiten zur 
 Kommunikation mit dem Programm einfügen**
