@@ -29,4 +29,6 @@ Mach es besser:
 * ***LÖSCHE DIE LOGS!!!***
 * Benutze **niemals** dubiose online-tools.
 
+Wenn du dich bei einer Aktion nicht genügend absichern kannst, dann lass sie sein. Lieber die Aktion lassen als deine Freiheit riskieren.
+
 Diese Listen sind bei weitem nicht vollständig. Erweitere sie und vertraue niemandem
