@@ -49,12 +49,14 @@ Dies sind die Hauptstandbeine eines Trojaners:
 Diese Standbeine sind gewichtet. Man muss dazu sagen, dass diese Gewichtung für verschiedene Fälle unterschiedlich sein kann. Der aufmerksame Leser wird merken, dass sich einige dieser Einträge ergänzen/doppeln, dies ist mir bewusst, aber ich wollte diese gerne von den anderen Einträgen entkoppeln.
 Auch *kann* diese Liste gar nicht vollständig sein, da für jeden Einsatzzweck eigene Anforderungen auftreten können. Im Folgenden findet sich eine gewisse Zusammenfassung der Punkte.
 
-Sicherheit:
+**Sicherheit:**
+
 Wie eingangs erwähnt, ist ein leicht zu erkennender Trojaner ein schlechter Trojaner. Er sollte sich immer im Hintergrund halten, im Zweifelsfall sollte sogar die Funktion hintenan gestellt werden.
 Nahezu jeder Trojaner speichert Daten in irgendeiner Form. Sei es im RAM oder sogar auf der Festplatte. Diese Daten können von einem Virenscanner gefunden und mit Signaturen abgeglichen werden. Ein Trojaner sollte immer "frisch" sein und seine Funktion so sehr verstecken, dass er weder einem Menschen auf dem Server noch einem Programm auffällt. Jeder anfallende Datenmüll sollte gelöscht werden, im Zweilfelsfall lieber zu viel als zu wenig
 Wie viel Aufwand für die Sicherheit draufgeht sei jedem Hacker und seinem Stil selbst überlassen, ich empfehle viel.
 
-Stabilität:
+**Stabilität:**
+
 Ein unerfahrener Leser sei erneut dazu aufgerufen, sich den meterpreter-payload des msf anzuschauen und ihn (bei sich) auszuprobieren. Ihm wird auffallen, dass dieses Werkzeug große Schwächen hat.
 Sollte man versuchen eine Persistenz einzurichten, wird im besten Fall ein einfacher Autostart eingerichtet, der aber oft nicht funktioniert und instabil ist. Außerdem gibt es keine Möglichkeit, diese auch ohne Befehl von außen einzurichten. 
 Ein Trojaner sollte diese Entscheidung nach Möglichkeit selbst fällen können. Und schon in einem so frühen Stadium eine Redundanz einrichten können.
@@ -62,38 +64,42 @@ Außerdem neigt meterpreter ab und zu dazu abzustürzen oder nach einem Verbindu
 Man sollte mit exception handling nur so um sich werfen.
 Dazu sei genug gesagt, als kleiner Hinweis: Einen Trojaner, der nicht funktioniert, kann man sich gleich schenken. (Verstehste? Wortspiel? Meterpreter und so? :P )
 
-Funktion:
+**Funktion:**
+
 Dazu sei nicht viel gesagt. Im einfachsten Fall soll der Trojaner neben Sicherheitsfeatures zum Selbstschutz auch eine Funktion zur erneuten Verbindung auf den Server bereitstellen. 
 Alles andere ist abhängig vom jeweiligen Einsatzzweck.
 Was nicht zwingend benötigt wird, sollte vielleicht nicht implementiert werden. Das hat enorme Auswirkungen auf mindestens zwei dieser Standbeine, Sicherheit und Größe.
 
-Größe:
+**Größe:**
+
 Die Größe darf, je nach Einsatzzweck, variieren. Manchmal muss man mit einem shellcode von 89 (!) bytes auskommen, manchmal hat man mehrere Gigabyte zur Verfügung. Als Faustregel gilt, dass man ab einem MB zu viel Speicherplatz verbraucht.
 Je kleiner man den Trojaner hält, desto schwieriger ist er zu entdecken. Außerdem ist er so sowohl schneller installiert als auch deinstalliert, was einem im Zeitdruck (unschön ausgedrückt) den Arsch retten kann. Besondere Anforderungen gelten für Air-Gap-Systeme, dort muss oft auf eine extrem sparsame Größe geachtet werden, da man mit hoher Wahrscheinlichkeit lieber auf den Mars funken würde.
 
-Eigenständigkeit:
+**Eigenständigkeit:**
+
 Ein Trojaner sollte, sofern es die Größe zulässt, immer eine Möglichkeit parat haben, sich gegen Virenscanner oder Menschen auf dem System wehren zu können. Wenn es die Größe zulässt, schreibe ich für jeden meiner Trojaner einen reverse-virenscanner.
 Der Zweck von diesem ist, nach möglichen Gefahren zu suchen und diese zu umschiffen. Wenn root-Zugriff gegeben ist, sollte man besonders vorsichtig sein, die Arbeit des scanners nicht zu stören. Es kann sinnvoller sein, nach dem Erkennen eines Scanvorgangs, je nach Signatur der Virenscanner die Speicherbereiche des Virenscanners anzuschauen und sich in für bereits als sauber befundene Dateien zu bewegen.
 Das ist aber wirklich das non-plus-ultra und muss nicht implementiert werden. Auch sollte man ein Set von Ereignissen bestimmen, auf die gewisse, vorprogrammierte Reaktionen folgen. Diese müssen nicht einmal den Selbstschutz betreffen. Hierbei trennt sich die Spreu vom Weizen. Ein guter Programmierer kann seinen Trojaner extrem schwer erkennbar, sehr stabil und eigenständig zugleich programmieren.
 Auch ohne Netzwerkzugriff muss der Trojaner sein Ziel kennen. Einen versuch ist es immer wert. Sollte dieser scheitern, sollte der Trojaner zum nächsten Punkt wechseln, der aber auch so ausgeführt werden kann.
 
-Fähigkeit, sich ohne Internetzugriff neue Kommunikationsmöglichkeiten zu suchen:
+**Fähigkeit, sich ohne Internetzugriff neue Kommunikationsmöglichkeiten zu suchen:**
+
 Mitunter eine der wichtigsten Funktionen eines wirklich guten Trojaners, der eine gewisse Eigenständigkeit erreicht hat. Er sollte auf jede erdenkliche Art und Weise versuchen, die Möglichkeit zur Kommunikation herzustellen ohne entdeckt zu werden.
 Außer einem WLAN-Hotspot mit verborgener SSID und einem regelmäßigen Scan nach bekannten WLAN-Hotspots und Bluetooth-devices gibt es noch diverse weitere Möglichkeiten, die offen stehen.
 So wie ein E.T. auf der Erde ohne Funkkontakt überleben kann, sollte ein guter Trojaner auch auf einem Air-Gap-System eine Möglichkeit zur Kommunikation finden. Wichtig ist dabei vor Allem, dass auf vorgegebene Ereignisse vorgegebene Reaktionen folgen, die der Herstellung einer Kommunikationsmöglichkeit dienen.
 Dabei ist der Zugriff auf eine Webcam oder einen Scanner Gold wert, damit kann eine ganze Menge getan werden. Auch, wenn sich das sehr nach Watch Dogs anhört, gibt es hierzu ein durchaus realistisches Beispielszenario:
 
-Man hat auf irgendeine erdenkliche Weise Zugriff auf eine Überwachungskamera erhalten und darauf einen Trojaner installiert, der sich mit der eingebauten SIM-Karte über das Mobilfunknetz verständigen kann. Der Vertrag für die SIM-Karte ist ausgelaufen und die Kamera wird nicht mehr genutzt, hat aber immernoch Strom.
-Beim Programmieren des Trojaners wurde berücksichtigt, dass die Kamera einen eingebauten WLAN-Chip hat. Der konnte allerdings nicht genutzt werden, da sich im Bereich ein Wifi-Scanner befand, der das Signal erkannt hätte.
-Dieser ist nun nicht mehr Vorhanden. 
-Für diesen Fall wurde die Kamera so programmiert, dass sie bei einer gewissen Abfolge eines gepulsten Lichts einen W-LAN Hotspot öffnet, der eine zufällig generierte SSID hat. 
-Daraufhin "morst" sie mit ihren LEDs die SSID und den zufällig generierten Key zurück, was wegen die Verwendung des fürs menschliche Auge unsichtbaren Ultravioletten Lichts kein Problem darstellt.
-Mit einem Laserpointer und einer Kamera kann nun eine Verbindung hergestellt werden.
+    Man hat auf irgendeine erdenkliche Weise Zugriff auf eine Überwachungskamera erhalten und darauf einen Trojaner installiert, der sich mit der eingebauten SIM-Karte    über das Mobilfunknetz verständigen kann. Der Vertrag für die SIM-Karte ist ausgelaufen und die Kamera wird nicht mehr genutzt, hat aber immernoch Strom.
+    Beim Programmieren des Trojaners wurde berücksichtigt, dass die Kamera einen eingebauten WLAN-Chip hat. Der konnte allerdings nicht genutzt werden, da sich im Bereich ein Wifi-Scanner befand, der das Signal erkannt hätte.
+    Dieser ist nun nicht mehr Vorhanden. 
+    Für diesen Fall wurde die Kamera so programmiert, dass sie bei einer gewissen Abfolge eines gepulsten Lichts einen W-LAN Hotspot öffnet, der eine zufällig generierte SSID hat. 
+    Daraufhin "morst" sie mit ihren LEDs die SSID und den zufällig generierten Key zurück, was wegen die Verwendung des fürs menschliche Auge unsichtbaren Ultravioletten Lichts kein Problem darstellt.
+    Mit einem Laserpointer und einer Kamera kann nun eine Verbindung hergestellt werden.
 
 Dazu gibt es aber noch ein eigenes Kapitel.
 
-Die letzten drei Punkte basieren darauf, den Trojaner unentdeckbar und nicht ausrottbar zu programmieren. 
-Das sind Techniken, die aufgrund ihrer Komplexität hier den Rahmen sprengen würden und darum vorerst nicht behandelt werden.
+*Die letzten drei Punkte basieren darauf, den Trojaner unentdeckbar und nicht ausrottbar zu programmieren. 
+Das sind Techniken, die aufgrund ihrer Komplexität hier den Rahmen sprengen würden und darum vorerst nicht behandelt werden.*
 
 ## Grundlegendes und Richtlinien
 Dieses Kapitel ist (noch) sehr unvollständig und sollte bei Gelegenheit ergänzt werden. Mehr Beispiele wären auch gerne gesehen.
